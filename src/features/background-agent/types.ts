@@ -47,6 +47,7 @@ export interface BackgroundTask {
   rootSessionID?: string
   parentSessionID: string
   parentMessageID: string
+  teamRunId?: string
   description: string
   prompt: string
   agent: string
@@ -103,6 +104,8 @@ export interface LaunchInput {
   agent: string
   parentSessionID: string
   parentMessageID: string
+  teamRunId?: string
+  suppressTmuxSpawn?: boolean
   parentModel?: { providerID: string; modelID: string }
   parentAgent?: string
   parentTools?: Record<string, boolean>
